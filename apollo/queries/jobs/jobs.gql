@@ -1,0 +1,13 @@
+query Jobs {
+  jobs {
+    id
+    Title
+    Content
+    Link
+    Department
+    Active
+    Image{
+      url
+    }
+  }
+}

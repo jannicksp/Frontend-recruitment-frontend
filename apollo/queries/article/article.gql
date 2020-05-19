@@ -1,0 +1,37 @@
+query Articles($id: ID!) {
+  article(id: $id) {
+    id
+    MetaTitle
+    MetaDescription
+    MetaImage {
+      url
+    }
+    Dynamic {
+       __typename
+      ... on ComponentRowsStack {
+        Title
+        Content
+      	}
+      ... on ComponentRowsPageHeader {
+        Title
+        Content
+      }
+      ... on ComponentRowsTechnology {
+        Title
+        Content
+      }
+      ... on ComponentRowsMinitest {
+        Title
+        Content
+      }
+      ... on ComponentRowsCulture {
+        Title
+        Content
+      }
+      ... on ComponentRowsJobs {
+        Title
+        Content
+      }
+    }
+  }
+}
